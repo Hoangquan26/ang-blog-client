@@ -1,0 +1,15 @@
+@mixin radiusCommon($radius: 5px) {
+    border-radius: $radius;
+}
+
+@mixin flexCommon($direction: row, $align: start, $justify: start) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin flexCustom($gap: 10px, $wrap: nowrap) {
+    gap: $gap;
+    flex-wrap: $wrap;
+}
