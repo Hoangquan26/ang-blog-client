@@ -1,0 +1,56 @@
+@use '@styles/_variable.module.scss' as variable;
+@use '@styles/_mixin.module.scss' as mixin;
+.container {
+    @include mixin.flexCommon(row, center, start);
+    @include mixin.flexCustom(10px);
+    position: relative;
+    .more-tag-wrapper {
+        @include mixin.flexCommon(row, center, start);
+    }
+
+    .more-tag-wrapper:hover .hide-tag-wrapper{
+        opacity: 1;
+        scale: 1;
+    }
+    .hide-tag-wrapper::before{
+        content: "";
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: -30px;
+    }
+    .hide-tag-wrapper {
+        opacity: 0;
+        scale: 0;
+        z-index: 100;
+        min-width: 200px;
+        padding: 20px 15px;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+        background-color: white;
+        bottom: -80px;
+        right: -100px;
+        @include mixin.flexCommon(column, center, center);
+        @include mixin.flexCustom(10px);
+        position: absolute;
+        transition: opacity ease .3s;
+    }
+    .hide-tag-wrapper p {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .more-tag-wrapper {
+        color: variable.$secondary_text_color;  
+        font-size: 14px;
+    }
+    .more-tag-wrapper ng-icon {
+        font-size: 14px;
+        color: variable.$secondary_text_color;
+    }
+    .more-tag-wrapper span {
+    
+        font-size: 14px;
+        color: variable.$secondary_text_color;
+    }
+}

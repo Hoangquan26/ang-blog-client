@@ -18,7 +18,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "@styles/*": ["./src/assets/styles/*"]
+      "@styles/*": ["./src/assets/styles/*"],
+      "@pages/*": ["./src/app/pages/*"],
+      "@layouts/*": ["./src/app/layouts/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@components/*": ["./src/app/components/*"],
     }
   },
   "angularCompilerOptions": {

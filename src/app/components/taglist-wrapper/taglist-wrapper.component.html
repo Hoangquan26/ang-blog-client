@@ -1,0 +1,16 @@
+<div class="container">
+   @for(item of showTaglist; track item.id) {
+        <app-blog-tag [tagType]="tagType" [tag]="item.content"/>
+   }
+
+   <div class="more-tag-wrapper" *ngIf="hideTaglist.length > 0">
+      <span>More</span>
+      <ng-icon name="hugeArrowDown01"></ng-icon>
+
+      <div class="hide-tag-wrapper">
+         @for(item of hideTaglist; track item.id) {
+            <p>{{item.content}}</p>
+         }
+      </div>
+   </div>
+</div>

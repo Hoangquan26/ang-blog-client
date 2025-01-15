@@ -1,0 +1,31 @@
+@use "@styles/_variable.module.scss" as variable;
+@use "@styles/_mixin.module.scss" as mixin;
+
+.container {
+
+    @include mixin.flexCommon(column, center, center);
+    background-image: url('../../../../assets/images/home_slider.jpg');
+    width: 100%;
+    height: 933px;
+    position: relative;
+    .main-content {
+        width: variable.$content_lg_width;
+        color: variable.$body_text_color;
+        .content-wrapper {
+            @include mixin.flexCommon(column);
+            @include mixin.flexCustom(20px);
+            width: 50%;
+            .content {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .secondary-content {
+        position: absolute;
+        bottom: 30px;
+        width: variable.$content_lg_width;
+        @include mixin.flexCommon(row, center, space-between);
+        @include mixin.flexCustom(30px);
+    }
+}

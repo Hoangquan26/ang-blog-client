@@ -1,0 +1,34 @@
+@use "@styles/_variable.module.scss" as variable;
+@use "@styles/_mixin.module.scss" as mixin;
+
+.container {
+    padding: 8px 20px;
+    font-size: 12px;
+    @include mixin.flexCommon(row, start, start);
+    @include mixin.radiusCommon(20px);
+    display: inline-flex;
+    background-color: variable.$bg_grey_color;
+    transition: background-color ease .3s;
+    cursor: pointer;
+    color: white;
+    span {
+        font-size: 12px;
+    }
+
+    &:hover {
+        background-color: variable.$secondary_color;
+    }
+
+    &:hover span{
+        color: #000;
+        transition: color ease .3s;;
+    }
+}
+
+.container.white {
+    color: variable.$secondary_text_color;
+    background-color: variable.$secondary_color;
+    &:hover {
+        background-color: #fff;
+    }
+}

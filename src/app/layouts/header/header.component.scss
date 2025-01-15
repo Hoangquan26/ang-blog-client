@@ -1,0 +1,69 @@
+@use '@styles/_mixin.module.scss' as mixin;
+@use '@styles/_variable.module.scss' as variable;
+.container {
+    @include mixin.flexCommon(row, center, center);
+    height: 106px;
+    z-index: 1000;
+    color: variable.$body_text_color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color ease .5s, height ease .5s;
+    .content-wrapper {
+        width: variable.$content-lg-width;
+        @include mixin.flexCommon(row, center, space-between);
+
+        .menu-list {
+            @include mixin.flexCommon(row, center);
+            @include mixin.flexCustom(30px);
+
+            .menu-wrapper {
+                @include mixin.flexCommon(row, center);
+                @include mixin.flexCustom(20px);
+                font-weight: 700;
+
+                a {
+                    cursor: pointer;
+                    color: variable.$blur_text_color;
+                    transition: color ease .3s;
+                }
+
+                a:hover {
+                    color: variable.$body_text_color;
+                }
+                a.active {
+                    color: variable.$body_text_color;
+                }
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .option-wrapper {
+        @include mixin.flexCommon(row, center);
+        @include mixin.flexCustom(20px);
+
+        .weather-wrapper {
+            @include mixin.flexCommon(row, center);
+            @include mixin.flexCustom(10px);
+            font-weight: 500;
+        }
+
+        .input-wrapper {
+            width: 262px;
+        }
+    }
+}
+
+.container.fixedHeader {
+    background-color: rgba(0,0,0,0.75);
+    height: 83px;
+}
+
+// .container.fixed {
+
+// }

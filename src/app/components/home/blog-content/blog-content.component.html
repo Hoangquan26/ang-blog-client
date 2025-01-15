@@ -1,0 +1,8 @@
+
+<div class="container">
+    <div class="wrapper">
+        @for(blogList of blogLists; track blogList.id) {
+            <app-blog-list [blogList]="blogList.list" [blogListTitle]="blogList.title" [blogListTag]="blogList.tags"/>
+        }
+    </div>
+</div>

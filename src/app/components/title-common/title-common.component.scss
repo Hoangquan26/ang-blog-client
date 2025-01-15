@@ -1,0 +1,16 @@
+@use '@styles/_variable.module.scss' as variable; 
+@use '@styles/_mixin.module.scss' as mixin;
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    color: variable.$primary_text_color;
+    @include mixin.flexCommon(column, start, start);
+    @include mixin.flexCustom(5px);
+    display: inline-flex;
+    &::after {
+        content: "";
+        width: 40px;
+        border: 1px solid #000;
+    }
+}
+

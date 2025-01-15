@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="main-content">
+       <div class="content-wrapper">
+            <app-blog-tag tag="SPORT" ></app-blog-tag>
+            <h2 class="content">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h2>
+            <app-button-common content="Continue Reading" [active]="true"></app-button-common>
+       </div>
+    </div>
+    <div class="secondary-content"> 
+        @for(blog of blogList; track blog.id) {
+            <app-blog-common [blog]="blog"/>
+        }
+    </div>
+</div>
