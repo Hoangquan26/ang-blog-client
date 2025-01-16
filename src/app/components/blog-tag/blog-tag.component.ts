@@ -5,7 +5,7 @@ import { bootstrapArrowRight } from '@ng-icons/bootstrap-icons';
 import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-blog-tag',
-  imports: [NgIcon, NgIf],
+
   templateUrl: './blog-tag.component.html',
   styleUrl: './blog-tag.component.scss',
   viewProviders: [provideIcons({bootstrapArrowRight})]

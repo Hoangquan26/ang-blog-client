@@ -126,15 +126,7 @@ export const blogListConstant: {
                 id: 5,
                 image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
             },
-            {
-                author: 'Emily Evans',
-                title: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                content: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                date: new Date('2021-06-01'),
-                tags: ['tag16', 'tag17', 'tag18'],
-                id: 6,
-                image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
-            }
+           
         ]
     },
     {
@@ -257,15 +249,7 @@ export const blogListConstant: {
                 id: 5,
                 image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
             },
-            {
-                author: 'Emily Evans',
-                title: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                content: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                date: new Date('2021-06-01'),
-                tags: ['tag16', 'tag17', 'tag18'],
-                id: 6,
-                image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
-            }
+           
         ]
     },
     {
@@ -377,15 +361,7 @@ export const blogListConstant: {
                 id: 5,
                 image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
             },
-            {
-                author: 'Emily Evans',
-                title: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                content: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.',
-                date: new Date('2021-06-01'),
-                tags: ['tag16', 'tag17', 'tag18'],
-                id: 6,
-                image: 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg'
-            }
+            
         ]
     }
 ]

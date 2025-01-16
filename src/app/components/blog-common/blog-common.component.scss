@@ -1,8 +1,8 @@
 @use "@styles/_variable.module.scss" as variable;
 @use "@styles/_mixin.module.scss" as mixin;
 .container {
+    overflow: hidden;
     width: 100%;
-    height: 100px;
     padding: 10px 20px;
     background-color: variable.$secondary_color;
     color: variable.$primary_text_color;
@@ -10,6 +10,8 @@
     @include mixin.flexCommon(column, start, start);
     @include mixin.flexCustom(10px);
     @include mixin.radiusCommon(10px);
+    cursor: pointer;
+    transition: background-color ease .3s;
 
     .title {
         text-overflow: ellipsis;
@@ -20,5 +22,63 @@
     .date {
         font-size: 12px;
         color: variable.$secondary_text_color;
+    }
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    .imgWrapper {
+        overflow: hidden;
+    }
+
+    .imgWrapper img, .imgWrapper {
+        width: 100%;
+    }
+
+    .imgWrapper img {
+        object-fit: cover;
+    }
+   
+    
+}
+
+
+.container.d {
+    @include mixin.flexCommon(row, center, start);
+    background-color: variable.$secondary_color;
+    .imgWrapper {
+        height: 70px;
+        min-width: 70px;
+        @include mixin.flexCommon(row, center, center);
+    }
+}
+
+.container.h {
+    padding: 0;
+    .contentWrapper {
+        padding: 10px 20px;
+    }
+    .imgWrapper {
+        flex: 1 1 100px;
+    }
+    .contentWrapper {
+        flex: 1 1 auto;
+    }
+    .imgWrapper img {
+        object-position: bottom;
+    }
+   
+}
+
+.container.z {
+    .contentWrapper {
+        padding: 10px 20px;
+    }
+    .imgWrapper {
+        flex: 1 1 200px;
+    }
+    .contentWrapper {
+        flex: 1 1 auto;
     }
 }

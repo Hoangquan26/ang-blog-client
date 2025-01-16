@@ -1,6 +1,6 @@
 export enum BlogCardType {
-    LARGE,
-    MEDIUM,
-    SMALL,
-    MINIMAL
+    LARGE = 'z',
+    MEDIUM = 'h',
+    SMALL = 'd',
+    MINIMAL = 'a'
 }

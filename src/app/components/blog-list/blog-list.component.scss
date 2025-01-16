@@ -10,4 +10,13 @@
         @include mixin.flexCommon(row, center, space-between);
         @include mixin.flexCustom(10px);
     }
+
+    .listWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 20px;
+        grid-auto-flow: row;
+    }
+
+
 }

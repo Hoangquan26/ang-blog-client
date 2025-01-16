@@ -3,4 +3,9 @@
         <app-title-common [title]="blogListTitle"></app-title-common>
         <app-taglist-wrapper [tagList]="blogListTag"/>
     </div>
+    <div class="listWrapper">
+        @for (item of blogList; track item.id) {
+            <app-blog-common [blog]="item" [blogType]="BlogType.LARGE"/>
+        }
+    </div>
 </div>

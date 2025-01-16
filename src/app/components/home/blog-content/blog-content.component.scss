@@ -1,10 +1,23 @@
 @use '@styles/_variable.module.scss' as variable;
 @use '@styles/_mixin.module.scss' as mixin;
 .container {
-    background-color: variable.$primary_color;
-    @include mixin.flexCommon(row, center, center);
-    .wrapper {
+    width: variable.$content_lg_width;
+    margin: auto;
+    @include mixin.flexCommon(row, start, center);
+
+    .wrapper, .ads-wrapper {
         padding: 90px 0;
+    }
+    .wrapper {
+        padding-right: 20px;
         width: variable.$content_lg_width;
+        @include mixin.flexCommon(column, center, center);
+        @include mixin.flexCustom(40px);
+        flex: 1 1 auto;
+    }
+    .ads-wrapper {
+        padding-left: 20px;
+        flex: 1 1 375px;
+        background-color: variable.$secondary_color;
     }
 }
